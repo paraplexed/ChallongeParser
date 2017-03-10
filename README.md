@@ -11,6 +11,14 @@ player1Name,player1Score,player2Name,player2Score,tournamentDate
 
 Date is parsed into mm/dd/yyyy format
 
+How to use
+=======
+- Download the latest jar from the releases folder
+- Run the jar `java -jar challonge_parser-1.0.jar`
+- In the UI, enter a tournament URL (ie http://apex2015melee.challonge.com/singles)
+- Hit parse URL
+
+
 TODO
 =======
 - Create wercker pipeline for easy publishing of new jar to the github release
