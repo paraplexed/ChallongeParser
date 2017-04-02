@@ -22,7 +22,7 @@ How to use
 How to build
 =======
 - Run `mvn clean install`, this will create a shaded fat jar that contains all dependencies
-- Start up launch4j, point it at the faat jar, and manually create an exe, if a .exe file is needed
+- Start up launch4j, point it at the fat jar, and manually create an exe, if a .exe file is needed
 
 TODO
 =======
