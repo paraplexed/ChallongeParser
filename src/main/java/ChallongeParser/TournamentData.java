@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -17,9 +18,11 @@ public class TournamentData {
     // These objects contain all tournament data, and since minified javascript objects
     // are out of the box valid json, we put load it into a Data.Storage object so we can reformat into the data we wan:w
     public static Storage getTournamentData(String challongeUrl) throws IOException {
-        URL url = new URL(challongeUrl);
-        InputStream inputStream = url.openStream();
-        BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
+        URLConnection connection = new URL(challongeUrl).openConnection();
+        connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11");
+        connection.connect();
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
         String line;
         String unStrippedData = null;
 
@@ -30,8 +33,7 @@ public class TournamentData {
         }
 
         if (unStrippedData != null) {
-            Storage tournamentData = parseTournamentData(unStrippedData);
-            return tournamentData;
+            return parseTournamentData(unStrippedData);
         }
         else {
             throw new RuntimeException("Could not find tournament data in url provided: " + challongeUrl);

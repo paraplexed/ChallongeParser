@@ -17,11 +17,9 @@
           </grid>
         </constraints>
         <properties>
+          <lineWrap value="true"/>
           <text value=""/>
         </properties>
-        <clientProperties>
-          <caretAspectRatio class="java.lang.Float" value="0.04"/>
-        </clientProperties>
       </component>
       <component id="84574" class="javax.swing.JButton" binding="browseCSVFileButton" default-binding="true">
         <constraints>
@@ -38,9 +36,6 @@
           </grid>
         </constraints>
         <properties/>
-        <clientProperties>
-          <caretAspectRatio class="java.lang.Float" value="0.04"/>
-        </clientProperties>
       </component>
       <component id="f92cd" class="javax.swing.JButton" binding="ParseTournament">
         <constraints>
@@ -59,9 +54,6 @@
         <properties>
           <text value="Enter Tournament Url"/>
         </properties>
-        <clientProperties>
-          <caretAspectRatio class="java.lang.Float" value="0.04"/>
-        </clientProperties>
       </component>
     </children>
   </grid>

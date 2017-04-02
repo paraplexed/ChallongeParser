@@ -13,11 +13,16 @@ Date is parsed into mm/dd/yyyy format
 
 How to use
 =======
-- Download the latest jar from the releases folder
-- Run the jar `java -jar challonge_parser-1.0.jar`
+- Make sure you have a java 1.8 JRE installed to run the jars
+- Download the latest jar or exe from the releases folder
+- Run the jar `java -jar challonge_parser-1.0.jar`, or double click the jar/exe if you already have a java jre set up
 - In the UI, enter a tournament URL (ie http://apex2015melee.challonge.com/singles)
 - Hit parse URL
 
+How to build
+=======
+- Run `mvn clean install`, this will create a shaded fat jar that contains all dependencies
+- Start up launch4j, point it at the faat jar, and manually create an exe, if a .exe file is needed
 
 TODO
 =======
